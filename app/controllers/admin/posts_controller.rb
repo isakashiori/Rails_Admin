@@ -9,7 +9,7 @@ class Admin::PostsController < Admin::BaseController
 
     def update
         if @post.update(post_params) 
-            redirect_to admin_user_path(@user), success: 'Update successful.'
+            redirect_to admin_post_path(@post), success: 'Update successful.'
         else
             flash.now['danger'] = 'Update faild.'
             render :edit
@@ -19,8 +19,8 @@ class Admin::PostsController < Admin::BaseController
     def show; end
 
     def destroy
-        @user.destroy!
-        redirect_to admin_users_path
+        @post.destroy!
+        redirect_to admin_posts_path
     end
 
     private

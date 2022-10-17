@@ -8,7 +8,7 @@ class Admin::PostsController < Admin::BaseController
   def edit; end
 
   def update
-    if @post.update(post_params) 
+    if @post.update(post_params)
       redirect_to admin_post_path(@post), success: 'Update successful.'
     else
       flash.now['danger'] = 'Update faild.'

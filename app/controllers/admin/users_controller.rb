@@ -11,19 +11,19 @@ class Admin::UsersController < Admin::BaseController
 
   def update
     if @user.update(user_params)
-        redirect_to admin_user_path(@user), success: 'Update successful.'
+      redirect_to admin_user_path(@user), success: 'Update successful.'
     else
-        flash.now['danger'] = 'Update faild.'
-        render :edit
+      flash.now['danger'] = 'Update faild.'
+      render :edit
     end
-end
+  end
 
   def destroy
     @user.destroy
     redirect_to admin_users_path
   end
 
-private
+  private
 
   def set_user
     @user = User.find(params[:id])

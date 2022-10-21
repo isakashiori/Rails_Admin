@@ -30,6 +30,6 @@ class Admin::PostsController < Admin::BaseController
   end
 
   def post_params
-    params.requie(:post).permit(:title, :content)
+    params.require(:post).permit(:title, :content)
   end
 end

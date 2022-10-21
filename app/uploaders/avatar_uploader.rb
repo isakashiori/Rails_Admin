@@ -14,13 +14,6 @@ class AvatarUploader < CarrierWave::Uploader::Base
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
-  # def default_url(*args)
-  #   # For Rails 3.1+ asset pipeline compatibility:
-  #   # ActionController::Base.helpers.asset_path("fallback/" + [version_name, "default.png"].compact.join('_'))
-  #
-  #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
-  # end
-
   def default_url
     'sample.jpg'
   end
@@ -39,8 +32,6 @@ class AvatarUploader < CarrierWave::Uploader::Base
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
-  #
-  # コメントを外して拡張子を絞る
   def extension_whitelist
     %w(jpg jpeg gif png)
   end

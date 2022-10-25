@@ -27,6 +27,10 @@
                   id: 'preview',
                   size: '300x200' %>
         </div>
+        <div class="form-group">
+          <%= f.label :role %>
+          <%= f.email_field :role, class: 'form-control' %>
+        </div>
         <%= f.submit class: 'btn btn-primary' %>
       <% end %>
     </div>

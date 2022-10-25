@@ -29,7 +29,8 @@
         </div>
         <div class="form-group">
           <%= f.label :role %>
-          <%= f.email_field :role, class: 'form-control' %>
+          <%= f.select :role, User.roles.keys.to_a, {}, class: 'form-control' %>
+
         </div>
         <%= f.submit class: 'btn btn-primary' %>
       <% end %>

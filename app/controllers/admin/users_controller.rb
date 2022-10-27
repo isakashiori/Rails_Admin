@@ -1,4 +1,6 @@
 class Admin::UsersController < Admin::BaseController
+  skip_before_action :require_login
+  skip_before_action :check_admin
   before_action :set_user, only: %i[edit update show destroy]
 
   def index

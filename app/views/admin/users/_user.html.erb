@@ -15,7 +15,7 @@
     <%= user.email %>
   </td>
   <td>
-    <%= user.created_at %>
+    <%= user.created_at.strftime('%B %d, %Y %H:%M') %>
   </td>
   <td>
     <%= link_to 'Show', admin_user_path(user), class: 'btn btn-info' %>
